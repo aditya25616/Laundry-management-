@@ -9,6 +9,8 @@ export async function GET() {
       message: "MongoDB connected successfully",
     });
   } catch (error) {
+    console.error("MongoDB connection failed:", error);
+
     return Response.json(
       {
         success: false,
